@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, status
 
 from . import crud
 from .schemas import Product, ProductCreate
@@ -21,4 +21,5 @@ async def get_product(session, product_id: int):
     product = await crud.get_product(session=session, product_id=product_id)
     if product is not None:
         return product
+    raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail='Product not found')
 
