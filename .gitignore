@@ -1,4 +1,11 @@
 
 /poetry.lock
 /venv
-/__pycache__
+*.pyc
+__pycache__/
+.idea/
+
+
+
+
+*.sqlite3
