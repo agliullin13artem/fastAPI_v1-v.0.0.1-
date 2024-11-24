@@ -8,7 +8,7 @@ from .schemas import ProductCreate, ProductUpdate, ProductUpdatePartial
 
 # возращаем все ПРОДУКТЫ
 async def get_products(session: AsyncSession) -> list[Product]:
-    stmt = select(Product).order_by(Product.id)
+    stmt = select(Product).order_by(-Product.id)
     result: Result = await session.execute(stmt)
     products = result.scalars().all()
     return list(products)
@@ -44,6 +44,7 @@ async def update_product(
 
 async def delete_product(session: AsyncSession, product: Product) -> None:
     await session.delete(product)
+    await session.commit()
 
 # async def update_product_partial(
 #     session: AsyncSession, product: Product, product_update: ProductUpdatePartial

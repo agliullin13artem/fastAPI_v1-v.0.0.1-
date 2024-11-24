@@ -1,11 +1,19 @@
 
 /poetry.lock
 /venv
-*.pyc
 __pycache__/
 .idea/
 
 
 
 
+*.pyc
+*/__pycache/*
+.idea/*
 *.sqlite3
+*.env
+*.log
+static/*
+.vscode/*
+media/*
+profile_images/*
