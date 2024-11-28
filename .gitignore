@@ -1,19 +1,49 @@
-
-/poetry.lock
-/venv
-__pycache__/
-.idea/
-
-
-
-
+# Python
 *.pyc
-*/__pycache/*
-.idea/*
-*.sqlite3
+*.pyo
+*.pyd
+__pycache__/
 *.env
+
+# Virtual Environment
+.venv/
+env/
+venv/
+
+# IDE/Editor
+.idea/
+*.iml
+.vscode/
+
+# Database
+*.db
+*.sqlite3
+
+# Logs and Runtime
 *.log
-static/*
-.vscode/*
-media/*
-profile_images/*
+*.pid
+*.seed
+*.cover
+*.coverage
+*.coveragerc
+*.tar
+*.gz
+*.zip
+
+# Alembic
+alembic/versions/
+
+# Pytest
+.pytest_cache/
+.tox/
+
+# Poetry
+poetry.lock
+.mypy_cache/
+
+# PyCharm project files
+*.idea/
+
+# OS
+.DS_Store
+Thumbs.db
